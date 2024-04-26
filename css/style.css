@@ -732,6 +732,9 @@ p.copyrighttext.pt-4 {
     object-position: 50% 87%;
     margin-bottom: 20px;
 }
+.foodcard-picture img:hover {
+    filter: grayscale(1);
+}
 .foodcard-content {
     text-align: center;
 }
