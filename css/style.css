@@ -81,7 +81,7 @@ a.site-logo img {
 }
 .site-navbar ul li a:hover {
     text-decoration: underline;
-    color: #000;
+    color: #000 !important;
 }
 .is-sticky a.site-logo.white-logo {
     display: none;
@@ -126,9 +126,7 @@ a.site-logo.black-logo {
 .navbar-area ul.open li a:hover {
     color: black !important;
 }
-.site-navbar ul li a:hover {
-    color: #ffffff;
-}
+
 
 .site-navbar ul li a.active {
     color: #b99248 !important;
