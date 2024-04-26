@@ -1,0 +1,773 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+p {
+    margin: 0;
+}
+
+figure {
+    margin: 0;
+}
+
+ul {
+    padding: 0;
+    list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+}
+
+.container {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.page-header {
+    /* position: absolute; */
+    top: 0;
+    right: 0;
+    left: 0;
+    padding: 20px 0;
+    z-index: 1;
+    z-index: 999;
+    box-shadow: 0 5px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* STICKY STYLES */
+/* .page-header.is-sticky {
+    position: fixed;
+    box-shadow: 0 5px 16px rgba(0, 0, 0, 0.1);
+    padding: 14px 0;
+    backdrop-filter: blur(10px);
+    animation: slideDown 0.35s ease-out;
+    background: var(--white);
+    border-bottom: 1px solid var(--border-bottom);
+} */
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+a.site-logo img {
+    max-width: 150px;
+}
+
+.is-sticky a.site-logo.white-logo {
+    display: none;
+}
+
+a.site-logo.black-logo {
+    display: none;
+}
+
+.is-sticky a.site-logo.black-logo {
+    display: block;
+}
+
+.site-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.site-navbar ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+}
+
+.site-navbar ul li {
+    padding: 0 18px 0 0;
+}
+
+.site-navbar ul li a {
+    color: #000;
+    padding: 10px;
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+    transition: all 0.3s ease-in-out;
+}
+
+
+.navbar-area ul.open li a:hover {
+    color: black;
+}
+.site-navbar ul li a:hover {
+    color: #ffffff;
+}
+
+.site-navbar ul li a.active {
+    color: #b99248 !important;
+}
+
+.nav-toggler {
+    border: 3px solid transparent;
+    padding: 5px;
+    background-color: transparent;
+    cursor: pointer;
+    height: 39px;
+    display: none;
+    z-index: 999;
+}
+
+.nav-toggler span {
+    width: 28px;
+    height: 3px;
+    background-color: #000;
+    display: block;
+    transition: 0.3s;
+}
+
+.nav-toggler span:before {
+    width: 28px;
+    height: 3px;
+    background-color: #000;
+    display: block;
+    transition: 0.3s;
+    content: "";
+    transform: translateY(-9px);
+}
+
+.nav-toggler span:after {
+    width: 28px;
+    height: 3px;
+    background-color: #000;
+    display: block;
+    transition: 0.3s;
+    content: "";
+    transform: translateY(6px);
+}
+
+.is-sticky .nav-toggler span,
+.is-sticky .nav-toggler span:before,
+.is-sticky .nav-toggler span:after {
+    background-color: var(--black);
+}
+
+
+.nav-toggler.toggler-open span {
+    background-color: transparent;
+}
+
+.nav-toggler.toggler-open span:before {
+    transform: translateY(0px) rotate(45deg);
+}
+
+.nav-toggler.toggler-open span:after {
+    transform: translateY(-3px) rotate(-45deg);
+}
+
+/*  */
+
+section.site-banner {
+    background: url(../images/home.jpg);
+    padding: 120px 0;
+    height: 743px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 1;
+}
+
+section.site-banner::after {
+    background-color: #00000061;
+    z-index: -1;
+    position: absolute;
+    inset: 0;
+    content: '';
+    width: 100%;
+    height: 100%;
+}
+
+section.site-banner .site-bnr-text h1 {
+    color: #fff;
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+section.site-banner .site-bnr-text {
+    text-align: center;
+}
+
+section.site-banner .site-bnr-text p {
+    color: #fff;
+    font-size: 16px;
+    max-width: 1140px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    line-height: 30px;
+}
+
+/* inner-page */
+section.inner-page {
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+}
+
+section.inner-page::after {
+    background-color: #00000061;
+    z-index: -1;
+    position: absolute;
+    inset: 0;
+    content: '';
+    width: 100%;
+    height: 100%;
+}
+
+section.inner-page.privacy {
+    background: url(../images/privacy.jpg)no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+section.inner-page.termes {
+    background: url(../images/Terms-banner.jpg)no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+section.inner-page.food-drink {
+    background: url(../images/foodbanner.jpg)no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+section.terms {
+    padding: 80px 0 0 0;
+}
+
+.condition_wrap h5 {
+    font-size: 26px;
+    font-weight: 600;
+    padding-bottom: 20px;
+    color: #b99248;
+}
+
+.condition_wrap p {
+    font-size: 16px;
+    line-height: 28px;
+    margin-bottom: 0;
+}
+
+.condition_wrap p {
+    padding-bottom: 20px;
+}
+
+.condition_wrap ul li::before {
+    position: absolute;
+    content: "";
+    background: #b99248;
+    width: 8px;
+    height: 8px;
+    top: 8px;
+    left: 0;
+    border-radius: 50%;
+}
+
+.condition_wrap ul li {
+    position: relative;
+    padding-left: 20px;
+    padding-bottom: 15px;
+}
+
+.site-bnr-text h2 {
+    color: #fff;
+    text-align: center;
+    font-size: 36px;
+    font-weight: 600;
+}
+
+.bnr-btn {
+    margin-top: 30px;
+}
+
+.bnr-btn a {
+    background: #b89146;
+    color: #fff;
+    display: inline-flex;
+    align-items: center;
+    font-size: 16px;
+    padding: 16px 43px;
+    text-align: center;
+    font-weight: 700;
+    z-index: 3;
+    position: relative;
+    transition: all 0.4s ease-out 0s;
+    text-transform: uppercase;
+    overflow: hidden;
+}
+
+.bnr-btn a:hover {
+    background-color: #fff;
+    color: #b89146;
+}
+
+.feature__area .bg-left {
+    position: relative;
+    z-index: 1;
+    padding: 50px 0;
+}
+
+.feature__area .bg-left::before {
+    position: absolute;
+    content: "";
+    right: 12px;
+    top: 0;
+    width: 90%;
+    height: 100%;
+    background: #f7f7f7;
+    z-index: -1;
+}
+
+.feature__area-left-title {
+    padding: 0 50px 0 80px;
+}
+
+.feature__area-image {
+    height: 413px;
+}
+
+.feature__area-image img {
+    height: 100%;
+    object-fit: cover;
+}
+
+.feature__area .bg-right {
+    position: relative;
+    z-index: 1;
+    padding: 50px 0;
+}
+
+.feature__area .bg-right::before {
+    position: absolute;
+    content: "";
+    left: 12px;
+    top: 0;
+    width: 90%;
+    height: 100%;
+    background: #f7f7f7;
+    z-index: -1;
+}
+
+section.explore {
+    padding: 60px 0;
+}
+
+.feature__area .row {
+    margin-bottom: 60px;
+}
+
+.feature__area-left-title h2 {
+    color: #000;
+    font-size: 34px;
+    margin-bottom: 10px;
+}
+
+.feature__area-left-title p {
+    color: #000;
+    line-height: 28px;
+    font-size: 16px;
+    font-style: normal;
+}
+
+.restauration figure img {
+    height: 300px;
+    object-fit: cover;
+    transition: .3s;
+}
+.restauration figure img:hover {
+    transform: scale(2, 2);
+}
+.restauration {
+    position: relative;
+    overflow: hidden;
+}
+
+.content-box {
+    position: absolute;
+    bottom: 0;
+    padding: 26px;
+    color: #fff;
+}
+
+section.resorts {
+    margin-bottom: 60px;
+}
+
+section.inner-page.casino-resorts {
+    background: url(../images/Casino-resorts.jpg)no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/*  */
+section.resorts-page {
+    padding: 60px 0;
+}
+
+.direct-wrapper {
+    height: 100%;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    background: #fff;
+}
+
+.divertissements-wrapper .row .col-lg-4.col-md-6 {
+    margin-bottom: 30px;
+}
+
+.direct-content {
+    padding: 30px;
+}
+
+.direct-img img {
+    height: 320px;
+    object-fit: cover;
+}
+
+.direct-content h3 {
+    margin-bottom: 10px;
+    color: #000;
+    font-weight: 500;
+    font-size: 26px;
+}
+
+.direct-content p {
+    margin-bottom: 10px;
+}
+
+.direct-content p span {
+    font-weight: 600;
+    color: #b99248;
+}
+
+section.inner-page.entertainment {
+    background: url(../images/Events-entertainment.jpg)no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+section.veelgestelde {
+    margin-bottom: 60px;
+}
+
+
+/* Style the accordion items */
+.accordion-item {
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 20px;
+    /* Add margin to create space between accordion items */
+}
+
+/* Style the accordion headings */
+.accordion-heading {
+    background-color: #f4f4f4;
+    padding: 20px 20px;
+    cursor: pointer;
+    position: relative;
+    transition: background-color 0.3s ease;
+    font-size: 20px;
+}
+
+.accordion-content p {
+    font-size: 18px;
+}
+
+/* Style the active (open) accordion heading */
+.accordion-heading.active {
+    background-color: #ddd;
+}
+
+/* Style the accordion content (hidden by default) */
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    padding: 0 20px;
+}
+
+/* Style the active accordion content */
+.accordion-content.show {
+    max-height: 500px;
+    /* Set max-height to desired value */
+    padding: 14px 20px;
+    display: block;
+    /* Ensure content is visible when shown */
+}
+
+.accordion-heading {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    align-items: center;
+}
+
+.veelgestelde-box {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.veelgestelde-box h3 {
+    font-size: 36px;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+.resorts-content p {
+    font-size: 16px;
+    line-height: 30px;
+    margin-bottom: 16px;
+}
+
+.resort-btn {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.resort-btn a {
+    font-weight: 600;
+    color: #000000;
+    font-size: 18px;
+    background: #b89146;
+    padding: 10px 26px;
+    display: inline-block;
+    border: 1px solid #b89146;
+}
+.resortcard-rating ul {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.resort-btn a:hover {
+    font-weight: 600;
+    color: #000000;
+    font-size: 18px;
+    background: transparent;
+    padding: 10px 26px;
+    display: inline-block;
+}
+
+.resortcard-text h4 {
+    font-size: 18px;
+    text-align: center;
+}
+
+.resortcard-text a {
+    color: #000;
+}
+
+.resortcard-text p {
+    font-size: 15px;
+    margin: 10px 0;
+    text-align: center;
+}
+
+.resortcard-rating {
+    display: flex;
+    justify-content: center;
+}
+
+.resortflex .row {
+    border: 2px solid #b99248;
+    padding: 20px;
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+}
+
+.resortcard-picture {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+.resortcard-picture img {
+    height: 300px;
+    object-fit: cover;
+    transition: .3s;
+}
+.resortcard-picture img:hover {
+    transform: scale(2, 2);
+}
+
+li.starflex {
+    display: flex;
+    align-items: center;
+    gap: 0;
+}
+
+li.starflex img {
+    max-width: 20px;
+    height: 20px;
+}
+
+/*footer-css-start*/
+
+.footer {
+    background-color: #b89146;
+    padding: 50px 0;
+
+}
+
+.footer-logo img {
+    max-width: 250px;
+    cursor: pointer;
+}
+
+.footer-links h2 {
+    color: #000;
+}
+
+.footer-links h3 {
+    color: #000;
+    font-size: 25px;
+}
+
+.footer-links li {
+    margin: 8px 0;
+}
+
+.footer-links a {
+    color: #fff;
+}
+
+.footer-links a:hover {
+    color: #000;
+}
+
+.footer-adresse h3 {
+    color: #000;
+}
+
+.footer-mails a,
+i {
+    color: #fff;
+    margin: 0 4px;
+}
+
+.social-signals i {
+    color: #fff;
+    font-size: 24px;
+    text-align: center;
+    line-height: 40px;
+    margin: 0 5px;
+    border: 1px solid #fff;
+    border-radius: 30px;
+    height: 40px;
+    width: 40px;
+    transition: .3s linear;
+}
+
+.social-signals {
+    padding: 25px 0;
+    cursor: pointer;
+}
+
+.social-signals i:hover {
+    transform: translateY(-10px);
+    color: #000;
+}
+
+p.copyrighttext.pt-4 {
+    color: #fff;
+    text-align: center;
+    border-top: 1px solid #fff;
+}
+
+/*footer-css-end*/
+.foodcard-title h3 {
+    text-align: center;
+    margin: 50px 0;
+}
+
+.foodcard-title a {
+    color: #000;
+}
+
+.foodcard-picture img {
+    max-width: 100%;
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    object-position: 50% 87%;
+    margin-bottom: 20px;
+}
+.foodcard-content {
+    text-align: center;
+}
+
+i.accordion-icon.fas.fa-chevron-down {
+    color: #b99248;
+}
+
+/*cookie start*/
+.cookie-alert {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    margin: 0 !important;
+    z-index: 999;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: all 500ms ease-out;
+    left: 0;
+}
+
+.cookie-alert.show {
+    opacity: 1;
+    transform: translateY(0%);
+    transition-delay: 1000ms;
+}
+
+a.btn.btn-primary.accept-cookies {
+    background: #b89146;
+    padding: 6px 22px;
+    font-size: 20px;
+    border: 1px solid #b89146;
+}
+a.btn.btn-primary.accept-cookies:hover {
+    background: transparent;
+    color: #b89146;
+}
+/*cookie end*/

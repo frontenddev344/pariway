@@ -1,0 +1,105 @@
+@media screen and (max-width: 991px) {
+
+    /* navbar css for mobile start */
+    .nav-toggler {
+        display: block;
+    }
+
+    .resorts .row {
+        row-gap: 15px;
+    }
+
+    .site-navbar {
+        min-height: 60px;
+    }
+
+    .site-navbar ul {
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        left: 0;
+        top: 0px;
+        flex-direction: column;
+        align-items: center;
+        background-color: #b99248 !important;
+        max-height: 0;
+        overflow: hidden;
+        transition: 0.3s;
+        z-index: 999;
+    }
+
+    .site-navbar ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .site-navbar ul li a {
+        padding: 25px;
+        color: var(--black);
+    }
+
+    .site-navbar ul li a.active {
+        color: var(--red) !important;
+    }
+
+    .site-navbar ul.open {
+        max-height: 100vh;
+        overflow: visible;
+        padding-top: 60px;
+    }
+
+    .feature__area-left-title {
+        padding: 0;
+        margin: 25px 0 0 0;
+    }
+
+    .feature__area .bg-left::before {
+        width: 100%;
+        right: 0;
+    }
+
+    .feature__area-image {
+        height: 413px;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .accordion-heading p {
+        font-size: 16px;
+    }
+
+    .accordion-content p {
+        font-size: 15px;
+    }
+    .feature__area .bg-right::before {
+        width: 100%;
+        left: unset;
+    }
+    .direct-content h3 {
+        font-size: 21px;
+    }
+
+    .foodcard-title .row {
+        row-gap: 20px;
+    }
+
+    .resortcard-text h4 {
+        padding-top: 20px;
+    }
+
+    .resortcard-rating {
+        padding: 20px 0;
+    }
+
+    .resortcard-text h4 {
+        font-size: 15px;
+        text-align: center;
+    }
+}
+
+
+@media screen and (max-width: 767px) {
+    .feature__area-left-title h2 {
+        font-size: 22px;
+    }
+}
