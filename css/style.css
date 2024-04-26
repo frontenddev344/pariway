@@ -79,7 +79,10 @@ img {
 a.site-logo img {
     max-width: 150px;
 }
-
+.site-navbar ul li a:hover {
+    text-decoration: underline;
+    color: #000;
+}
 .is-sticky a.site-logo.white-logo {
     display: none;
 }
@@ -121,7 +124,7 @@ a.site-logo.black-logo {
 
 
 .navbar-area ul.open li a:hover {
-    color: black;
+    color: black !important;
 }
 .site-navbar ul li a:hover {
     color: #ffffff;
